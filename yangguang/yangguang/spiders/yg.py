@@ -19,7 +19,7 @@ class YgSpider(scrapy.Spider):
             item = YangguangItem()
             item["title"] = tr.xpath("./td[2]/a[@class='news14']/text()").extract_first()
             item["href"] = tr.xpath("./td[2]/a[@class='news14']/@href").extract_first()
-            item["publish_date"] = tr.xpath("./te[last()]/text()").extract_first()
+            item["publish_date"] = tr.xpath("./td[last()]/text()").extract_first()
 
             yield scrapy.Request(
                 item["href"],
