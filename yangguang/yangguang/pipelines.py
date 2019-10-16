@@ -11,7 +11,9 @@ logger = logging.getLogger(__name__)
 
 
 class YangguangPipeline(object):
-    def process_item(self, item, spider):
+    def process_item(self, item, spider): # spider:当前要处理的spider对象
+        # if spider.name == 'yg':
+        #     logger.warning('*'*100)
         item["content"] = self.process_content(item["content"])
         logger.warning(item)
         return item
