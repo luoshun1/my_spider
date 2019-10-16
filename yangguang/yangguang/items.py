@@ -11,4 +11,9 @@ import scrapy
 class YangguangItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    href = scrapy.Field()
+    publish_date = scrapy.Field()
+    content_img = scrapy.Field()
+    content = scrapy.Field()
+
