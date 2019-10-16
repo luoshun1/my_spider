@@ -27,9 +27,18 @@ class YgSpider(scrapy.Spider):
                 meta={"item":item}
             )
 
+        # 翻页
+        next_url = response.xpath("//a[text()='>']/@href").extract_first()
+        if next_url is not None:
+            yield scrapy.Request(
+                next_url,
+                callback=self.parse
+            )
+
     def parse_detail(self, response):
         item = response.meta["item"]
         item["content"] = response.xpath("//td[@class='txt16_3']/text()").extract()
         item["content_img"] = response.xpath("//td[@class='txt16_3']//img/@src").extract()
         item["content_img"] = ["http://wz.sun0769.com" + i for i in item["content_img"]]
-        logger.warning(item)
+        # logger.warning(item)
+        yield item
