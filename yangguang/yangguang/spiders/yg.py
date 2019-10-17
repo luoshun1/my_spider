@@ -9,8 +9,10 @@ logger = logging.getLogger(__name__)
 
 class YgSpider(scrapy.Spider):
     name = 'yg'
-    allowed_domains = ['sun0769.com'] #限定爬去的域名
-    start_urls = ['http://wz.sun0769.com/index.php/question/questionType?type=4&page=0']
+    # allowed_domains = ['sun0769.com'] #限定爬去的域名
+    # start_urls = ['http://wz.sun0769.com/index.php/question/questionType?type=4&page=0']
+    allowed_domains = ['sun07691111.com']
+    start_urls = ['http://www.baidu.com']
 
     def parse(self, response):
         # 分组
