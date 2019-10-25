@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for manhuadui project
+# Scrapy settings for manhua project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'manhuadui'
+BOT_NAME = 'manhua'
 
-SPIDER_MODULES = ['manhuadui.spiders']
-NEWSPIDER_MODULE = 'manhuadui.spiders'
+SPIDER_MODULES = ['manhua.spiders']
+NEWSPIDER_MODULE = 'manhua.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'manhuadui (+http://www.yourdomain.com)'
+#USER_AGENT = 'manhua (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'manhuadui.middlewares.ManhuaduiSpiderMiddleware': 543,
+#    'manhua.middlewares.ManhuaSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'manhuadui.middlewares.ManhuaduiDownloaderMiddleware': 543,
+#    'manhua.middlewares.ManhuaDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'manhuadui.pipelines.ManhuaduiPipeline': 300,
+#    'manhua.pipelines.ManhuaPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

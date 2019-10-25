@@ -2,8 +2,8 @@
 import scrapy
 
 
-class ManhuaSpider(scrapy.Spider):
-    name = 'manhua'
+class ManhuaduiSpider(scrapy.Spider):
+    name = 'manhuadui'
     allowed_domains = ['manhuadui.com']
     start_urls = ['http://manhuadui.com/']
 
